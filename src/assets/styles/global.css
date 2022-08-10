@@ -1,0 +1,27 @@
+/* GLOBAL STYLES
+   ========================================================================== */
+
+html,
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #ffffff;
+  color: #3a3a3c;
+  min-width: 375px;
+  scroll-behavior: smooth;
+}
+
+/**
+  * Apply border-box style to all elements
+  */
+
+* {
+  box-sizing: border-box;
+}
+
+/**
+  * Remove underline of <a> tag.
+  */
+
+a {
+  text-decoration: none;
+}

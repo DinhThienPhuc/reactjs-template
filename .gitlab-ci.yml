@@ -1,0 +1,68 @@
+image: quay.io/vmoteam/pm2:14.14.0-alpine
+
+stages:
+  - deploy
+
+.init_template: &init_template
+  before_script:
+    - "which ssh-agent || ( apk add --update openssh )"
+    - apk update && apk add bash
+    - eval "$(ssh-agent -s)"
+    - if [ "$CI_COMMIT_BRANCH" == "deployment/dev" ];
+      then
+      echo "$SSH_PRIVATE_KEY_DEV" | tr -d '\r' | ssh-add - > /dev/null;
+      fi
+    - if [ "$CI_COMMIT_BRANCH" == "deployment/staging" ];
+      then
+      echo "$SSH_PRIVATE_KEY_STAGING" | tr -d '\r' | ssh-add - > /dev/null;
+      fi
+    - ssh-add -l
+
+.script_template: &script_template
+  script:
+    - if [ "$CI_COMMIT_BRANCH" == "deployment/dev" ]; then ENV="dev"; fi
+    - if [ "$CI_COMMIT_BRANCH" == "deployment/staging" ]; then ENV="staging"; fi
+    - pm2 deploy ecosystem.json $ENV
+
+.script_setup_template: &script_setup_template
+  script:
+    - if [ "$CI_COMMIT_BRANCH" == "deployment/dev" ]; then ENV="dev"; fi
+    - if [ "$CI_COMMIT_BRANCH" == "deployment/staging" ]; then ENV="staging"; fi
+    - pm2 deploy ecosystem.json $ENV setup
+
+.rules_template_normal: &rule_template_normal
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "deployment/dev"
+        || $CI_COMMIT_REF_NAME == "deployment/staging"'
+      when: on_success
+    - if: '$CI_COMMIT_REF_NAME != "deployment/dev"
+        || $CI_COMMIT_REF_NAME != "deployment/staging"'
+      when: never
+
+sonarqube-check:
+  image:
+    name: sonarsource/sonar-scanner-cli:latest
+    entrypoint: [""]
+  variables:
+    SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar" # Defines the location of the analysis task cache
+    GIT_DEPTH: "0" # Tells git to fetch all the branches of the project, required by the analysis task
+  cache:
+    key: "${CI_JOB_NAME}"
+    paths:
+      - .sonar/cache
+  script:
+    - sonar-scanner
+  allow_failure: true
+  stage: deploy
+  only:
+    - merge_requests
+    - master
+    - develop
+
+deploy:
+  stage: deploy
+  tags:
+    - vops-runner
+  <<: *init_template
+  <<: *script_template
+  <<: *rule_template_normal

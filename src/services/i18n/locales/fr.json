@@ -1,0 +1,10 @@
+{
+  "translation": {
+    "welcome-to-react": "Bienvenue à React et react-i18next",
+    "navbar": {
+      "homepage": "Page d'accueil",
+      "posts": "Des postes",
+      "about_us": "À propos de nous"
+    }
+  }
+}

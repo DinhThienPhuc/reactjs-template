@@ -1,0 +1,10 @@
+{
+  "translation": {
+    "welcome-to-react": "Chào mừng đến với React",
+    "navbar": {
+      "homepage": "Trang chủ",
+      "posts": "Bài viết",
+      "about_us": "Về chúng tôi"
+    }
+  }
+}
