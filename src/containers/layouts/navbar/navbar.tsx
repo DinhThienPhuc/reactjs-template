@@ -4,9 +4,9 @@
 import { useCallback, useMemo } from "react";
 
 import { NavLink } from "react-router-dom";
-import Select from "components/select/select";
+import { Select } from "components";
 import Styled from "./navbar.style";
-import useSessionStorage from "hooks/useSessionStorage";
+import { useSessionStorage } from "hooks";
 import { useTheme } from "services/styled-themes";
 import { useTranslation } from "services/i18n";
 

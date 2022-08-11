@@ -1,7 +1,7 @@
 /* POST API INTERFACES
    ========================================================================== */
 
-import { IBaseResponse } from "api/interfaces";
+import { IBaseResponse } from "../interfaces";
 
 export interface IPostData {
   createdAt: string;

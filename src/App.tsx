@@ -6,7 +6,6 @@ import "assets/styles/global.css";
 import "services/i18n";
 
 import { BrowserRouter, useRoutes } from "react-router-dom";
-import store, { Provider } from "store";
 
 import ErrorBoundary from "containers/error-boundary/error-boundary";
 import { ThemesProvider } from "services/styled-themes";
@@ -31,9 +30,7 @@ const App = () => {
     <ErrorBoundary onReset={reload}>
       <BrowserRouter>
         <ThemesProvider>
-          <Provider store={store}>
-            <Main />
-          </Provider>
+          <Main />
         </ThemesProvider>
       </BrowserRouter>
     </ErrorBoundary>

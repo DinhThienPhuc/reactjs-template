@@ -2,7 +2,7 @@
    ========================================================================== */
 
 import { useCallback } from "react";
-import useSessionStorage from "hooks/useSessionStorage";
+import { useSessionStorage } from "hooks";
 
 const Login = () => {
   const [, setRefreshToken] = useSessionStorage<string | null>(

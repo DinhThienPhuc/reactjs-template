@@ -1,222 +1,216 @@
-# C2 React base 👋👋👋
+# Reactjs Template
 
-## Requires
+✨✨✨ A React Template to easily build and develop product. ✨✨✨
 
-- node: ^12.22.0 || ^14.17.0 || >=16.0.0"
-- yarn: v1 or v2 (_**prefer using it over npm**_)
+## Requirements
 
-## 📂 Structure
+| Packages | Versions                         |
+| -------- | -------------------------------- |
+| `node`   | ^12.22.0 or ^14.17.0 or >=16.0.0 |
+| `yarn`   | v1 or v2                         |
 
+## How to use
+
+First clone this repository:
+
+```shell
+git clone https://github.com/DinhThienPhuc/reactjs-template.git
 ```
+
+Replace git remote with your repo:
+
+```shell
+git remote set-url origin <link-to-your-repo>
+```
+
+Change `reactjs-template` folder name to your project name. Then feel free to develop your new world **_voila_**! ✨✨✨
+
+## Structure
+
+```shell
 src
 ├── api
 │   ├── <post>
 │   │   ├── <post>.api.ts
-│   │   └── <post>.interface.ts
+│   │   └── <post>.interfaces.ts
 │   │
 │   ├── ...
 │   ├── interfaces.ts
 │   ├── request.ts
-│   └── README.md
+│   └── index.ts
 │
 ├── assets
-│   ├── images
-│   │   ├── <first>.png
-│   │   ├── ...
-│   │   └── <second>.svg
-│   │
 │   ├── fonts
 │   │   ├── ...
 │   │   └── <first>.ttf
 │   │
-│   ├── styles
-│   │   ├── global.css
-│   │   └── reset.css
+│   ├── icons
+│   │   ├── <first>.svg
+│   │   ├── ...
+│   │   └── index.ts
 │   │
-│   └── README.md
+│   ├── images
+│   │   ├── <first>.png
+│   │   ├── <second>.jpg
+│   │   ├── ...
+│   │   └── index.ts
+│   │
+│   └── styles
+│       ├── global.css
+│       └── reset.css
 │
 ├── components
-│   ├── <select>
-│   │   ├── <select>.story.tsx
-│   │   ├── <select>.style.tsx
-│   │   ├── <select>.test.tsx
-│   │   ├── <select>.tsx
-│   │   └── <select>.utils.tsx
+│   ├── <com>
+│   │   ├── <com>.style.tsx
+│   │   ├── <com>.tsx
+│   │   └── <com>.utils.tsx
 │   │
 │   ├── ...
-│   └── README.md
+│   └── index.ts
 │
 ├── containers
 │   ├── auth
-│   │   └── AuthRoute.tsx
+│   │   └── auth-route.tsx
 │   │
 │   ├── error-boundary
-│   │   ├── error-boundary.style.ts
+│   │   ├── error-boundary.style.tsx
 │   │   └── error-boundary.tsx
 │   │
 │   ├── layouts
-│   │   ├── footer
-│   │   │   ├── footer.story.tsx
-│   │   │   ├── footer.style.ts
-│   │   │   ├── footer.test.tsx
-│   │   │   └── footer.tsx
-│   │   ├── navbar
-│   │   │   ├── navbar.story.tsx
-│   │   │   ├── navbar.style.ts
-│   │   │   ├── navbar.test.tsx
-│   │   │   └── navbar.tsx
-│   │   │
-│   │   ├── ...
-│   │   ├── default.style.ts
+│   │   ├──<component>
+│   ├── ├── ...
+│   │   ├── default.style.tsx
 │   │   └── default.tsx
-│   │
-│   ├── loadable-fallback
-│   │   ├── ...
-│   │   └── loading.tsx
-│   │
 │   ├── ...
-│   └── README.md
+│   └── loadable-fallback
+│       └── loading.tsx
 │
 ├── hooks
-│   ├── useEventListener.ts
-│   ├── useHover.ts
-│   ├── useSessionStorage.ts
+│   ├── <hook>.ts
 │   ├── ...
-│   └── README.md
+│   └── index.ts
 │
 ├── pages
-│   ├── home
-│   │   ├── index.style.ts
-│   │   └── index.tsx
-│   │
-│   ├── ...
-│   └── README.md
-│
+│   └── <page>
+│       ├── <page>.style.ts
+│       ├── <page>.utils.ts
+│       └── <page>.tsx
+|
 ├── routes
-│   ├── constants.ts
-│   ├── index.tsx
-│   └── README.md
+│   ├── constant.ts
+│   └── index.ts
 │
 ├── services
 │   ├── i18n
 │   │   ├── locales
-│   │   │   ├── <en>.json
-│   │   │   ├── ...
-│   │   │   └── <vi>.json
 │   │   └── index.ts
-│   │
-│   ├── styled-themes
-│   │   ├── index.tsx
-│   │   └── schema.json
-│   │
 │   ├── ...
-│   └── README.md
-│
-├── store
-│   ├── index.ts
-│   ├── <post-detail>.slice.ts
-│   ├── <post-list>.slice.ts
-│   ├── ...
-│   └── README.md
-│
-├── stories
+│   │
+│   └── styled-themes
+│       ├── index.tsx
+│       └── schema.json
 │
 ├── types
-│   ├── <styled-components>.d.ts
-│   ├── ...
-│   └── README.md
-│
-├── utils
-│   ├── constants.ts
-│   ├── functions.ts
-│   ├── interfaces.ts
-│   ├── ...
-│   └── README.md
-│
-├── stories
-│
-├── types
-│   ├── <styled-components>.d.ts
-│   ├── ...
-│   └── README.md
+│   └── ...
 │
 └── utils
-
+    ├── constants.ts
+    ├── functions.ts
+    ├── interfaces.ts
+    └── ...
 ```
 
-## ⚙️ Setup for specific library
+### Explaination elements inside `src`:
 
-### 🔧 SonarQube
+🔴 **Rule of import**:
 
-- Get the project key from https://sonar.software.vmo.dev/, then update `sonar.projectKey` variable:
+- _**Always use relative path for files inside module**_.
+- _**Always use absolute path for connecting file between modules**_.
 
-```
-    sonar.projectKey=update-this-with-project-key-from-sonar-page
-    sonar.qualitygate.wait=true
-```
+🔴 **Entry point**: _**the file contains all relative files. It is somehow a gate, an entrance for the whole folder. So that, when importing the element insided folder, we only need to import them all from one**_.
 
-### 🔧 ESLint, Prettier and Husky
+For example, with [`components`](src/components) folder:
 
-Install with basic config `.eslintrc.js`, `.husky`. Feel free to modify for specific usage.
-
-### 🔧 Storybook
-
-- Use the Storybook CLI to install it in a single command. Run this inside your existing project’s root directory:
-
-```
-# Add Storybook:
-npx sb init
-```
-
-- Check that everything worked by running:
-
-```
-# Starts Storybook in development mode
-yarn storybook
-```
-
-- For more issues, please check: https://storybook.js.org/docs/react/get-started/install
-
-### 🔧 CI/CD with GitLab
-
-## 🛑 Note
-
-### Lodash
-
-This base use simplified version of some Lodash methods, to make them more digestible and they might miss edge cases covered in the original version .
-
-Feel free to use the simple version [`src/utils/lodash.ts`](src/utils/lodash.ts) or install and pick up the full power of the Lodash itself!
-
-🚧 NOTE: In case you use Lodash, remember to import only the functions you need through `lodash/_` or `lodash._`:
+[`index.ts`](src/components/index.ts)
 
 ```typescript
-const get = require("lodash/get");
-// or
-import get from "lodash/get";
+/* COMPONENTS ENTRY
+   ========================================================================== */
+import A from './A/A'
+import B from './B/B'
+import C from './C/C'
+...
+
+export { A, B, C }
 ```
 
-### Momentjs
+When using a component, instead:
 
-## Document
+```typescript
+import A from '/path/to/component/A/A'
+import B from '/path/to/component/B/B'
+import C from '/path/to/component/C/C'
+...
 
-Source: https://tsdoc.org/
-
+// Using component A, B, C
 ```
-/**
- * Adds two numbers together.
- * @example
- * Here's a simple example:
- * ```
- * // Prints "2":
- * console.log(add(1,1));
- * ```
- * @example
- * Here's an example with negative numbers:
- * ```
- * // Prints "0":
- * console.log(add(1,-1));
- * ```
- */
-export function add(x: number, y: number): number {
-}
+
+We could use the shorter import below:
+
+```typescript
+import { A, B, C } from 'components'
+...
+
+// Using component A, B, C
 ```
+
+### Folders explainations
+
+#### [`assets`](src/assets) - icons, images, fonts, videos, ...
+
+- [`icons`](src/assets/icons) - Contains all `svg` icons and a [`index.ts`](src/assets/icons/index.ts) file.
+
+  - [`index.ts`](src/assets/icons/index.ts): the entry point for all `svg` icons.
+
+- [`images`](src/assets/images) - Contains all type of image and a [`index.ts`](src/assets/images/index.ts) file.
+
+  - [`index.ts`](src/assets/images/index.ts): the entry point for all image files.
+
+- [`styles`](src/assets/styles) - Contains [`reset.css`](src/assets/styles/reset.css) and [`global.css`](src/assets/styles/global.css) file.
+
+  - [`reset.css`](src/assets/styles/reset.css): reset the style of every browser to the same one, so that styles will be synced between browser crossing.
+  - [`global.css`](src/assets/styles/global.css): contains all global styles of the project.
+
+#### [`components`](src/components) - basic, pure components
+
+- `<component>` - Contains all elements of a component
+
+  - `<component>.tsx`: component main content
+  - `<component>.style.tsx`: component styles
+  - `<component>.utils.tsx`: component utils such as interfaces, constants, functions used for component only
+
+#### [`hooks`](src/hooks) - useful hooks
+
+- `<useHook>` - A custom hook for specific usage, included with example.
+- [`index.ts`](src/hooks/index.ts): the entry point for all hooks
+
+#### [`pages`](src/pages) - define page layout, head, which view it will render, ...
+
+- [`_app.tsx`](src/pages/_app.tsx): root component.
+- [`_document.tsx`](src/pages/_document.tsx): document component.
+- [`404.tsx`](src/pages/404.tsx): not-found component.
+- [`index.tsx`](src/pages/index.tsx): homepage
+
+#### [`services`](src/services) - external services of the project, could be easily used by modifying some line of codes
+
+- `<service>` - Contains all elements of a service. It is isolated and independent from the project. It could be plug in and out easily
+
+#### [`utils`](src/utils) - can contains anythings with global scope
+
+- [`constants.ts`](src/utils/constants.ts): global constants.
+- [`functions.ts`](src/utils/functions.ts): global functions.
+- [`interfaces.ts`](src/utils/interfaces.ts): global interfaces.
+
+## API
+
+Feel free to pick up the best fetching stradegy for you project! ✨✨✨
