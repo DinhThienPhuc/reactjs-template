@@ -4,10 +4,16 @@
     "es2021": true,
     "node": true
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:json/recommended",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
@@ -20,8 +26,7 @@
   },
   "plugins": ["react", "@typescript-eslint", "react-hooks"],
   "rules": {
-    "indent": ["warn", 2],
-    "linebreak-style": ["warn", "unix"],
+    "indent": ["warn", 2, { "ignoredNodes": ["ConditionalExpression"] }],
     "quotes": ["warn", "double"],
     "semi": ["warn", "always"],
     "react/react-in-jsx-scope": "off",
