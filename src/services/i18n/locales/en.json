@@ -1,10 +1,26 @@
 {
   "translation": {
-    "welcome-to-react": "Welcome to React and react-i18next",
-    "navbar": {
-      "homepage": "Homepage",
-      "posts": "Posts",
-      "about_us": "About us"
+    "header": {
+      "settings": "Settings",
+      "profile": "Profile"
+    },
+    "buttons": {
+      "back": "Back"
+    },
+    "placeholders": {
+      "searchHere": "Search here"
+    },
+    "texts": {
+      "profile": "Profile",
+      "permissions": "Permissions",
+      "sync": "Sync",
+      "autoFill": "Autofill",
+      "about": "About",
+      "help": "Help",
+      "version": "Version",
+      "greeting": "{{name}}, Good {{time}}",
+      "mainTitle": "Find out the best password for life.",
+      "title": "High calories foods"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "reactjs-template",
+  "name": "drowssap",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,13 +10,15 @@
     "@types/react-dom": "^17.0.9",
     "@types/react-router-dom": "^5.3.3",
     "axios": "^0.25.0",
+    "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "react-router-dom": "6",
     "react-scripts": "5.0.0",
     "styled-components": "^5.3.3",
-    "typescript": "^4.4.2"
+    "typescript": "^4.4.2",
+    "zustand": "^4.1.1"
   },
   "scripts": {
     "dev": "env-cmd -f .env.development react-scripts start",
@@ -27,7 +29,7 @@
     "build:production": "env-cmd -f .env.production react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "husky install",
+    "prepare": "husky install && chmod ug+x .husky/*",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "format": "npx pretty-quick --staged && npx lint-staged",
@@ -81,7 +83,7 @@
     "@typescript-eslint/parser": "^5.10.0",
     "babel-loader": "^8.2.3",
     "env-cmd": "^10.1.0",
-    "eslint": "^8.7.0",
+    "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-react": "^7.28.0",

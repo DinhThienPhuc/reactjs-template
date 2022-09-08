@@ -1,18 +1,14 @@
 /* LAYOUT DEFAULT COMPONENT STYLES
    ========================================================================== */
 
+import { DEFAULT_LAYOUT_SIZE } from "utils/constants";
 import styled from "styled-components";
 
 const Styled = {
   Main: styled.main`
     width: 100%;
-    margin-top: 50px;
-    min-height: calc(100vh - 100px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: ${({ theme }) => theme.colors.body};
     color: ${({ theme }) => theme.colors.text};
+    padding: ${15 + DEFAULT_LAYOUT_SIZE.HEADER_HEIGHT}px 24px 100px 24px;
   `,
 };
 

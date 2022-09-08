@@ -3,7 +3,7 @@
 
 import { Navigate, useLocation } from "react-router-dom";
 
-import ROUTES from "routes/constant";
+import { ROUTES } from "utils/constants";
 import { useMemo } from "react";
 import useSessionStorage from "hooks/useSessionStorage";
 
@@ -25,7 +25,7 @@ const AuthRoute = ({ children }: IAuthRouteProps) => {
    */
   const [refreshToken] = useSessionStorage<string | null>(
     "refresh-token",
-    null
+    null,
   );
 
   const isAuthenticated = useMemo(() => {
@@ -36,16 +36,16 @@ const AuthRoute = ({ children }: IAuthRouteProps) => {
    * Handle case when user is authenticated but attemp to access Login page
    * -> redirect to Homepage
    */
-  if (isAuthenticated && location.pathname === ROUTES.login) {
-    return <Navigate to={ROUTES.home} />;
+  if (isAuthenticated && location.pathname === ROUTES.LOGIN) {
+    return <Navigate to={ROUTES.HOME} />;
   }
 
   /**
    * Handle case when user is NOT authenticated but attemp to access Privated page
    * -> redirect to Login page
    */
-  if (!isAuthenticated && location.pathname !== ROUTES.login) {
-    return <Navigate to={ROUTES.login} />;
+  if (!isAuthenticated && location.pathname !== ROUTES.LOGIN) {
+    return <Navigate to={ROUTES.LOGIN} />;
   }
 
   /**
