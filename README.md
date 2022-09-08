@@ -211,6 +211,14 @@ import { A, B, C } from 'components'
 - [`functions.ts`](src/utils/functions.ts): global functions.
 - [`interfaces.ts`](src/utils/interfaces.ts): global interfaces.
 
+## Commit process
+
+In case Husky doesn't run on each commit, run this command manually:
+
+```
+chmod ug+x .husky/*
+```
+
 ## API
 
 Feel free to pick up the best fetching stradegy for you project! ✨✨✨
