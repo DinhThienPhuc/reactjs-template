@@ -19,7 +19,7 @@ const Styled = {
     align-items: center;
     justify-content: space-between;
     height: ${DEFAULT_LAYOUT_SIZE.HEADER_HEIGHT}px;
-    padding: 30px 24px 0px 24px;
+    padding: 30px 24px 10px 24px;
     background-color: ${({ theme }) => theme.colors.body};
 
     & .header-icon {
