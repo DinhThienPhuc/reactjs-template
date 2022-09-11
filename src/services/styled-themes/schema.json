@@ -5,7 +5,6 @@
       "name": "Light",
       "colors": {
         "white": "#ffffff",
-        "boxShadow": "20px 0px 40px rgba(138, 155, 176, 0.25)",
         "body": "#fbfbfb",
         "green": "#31D6D6",
         "black": {
@@ -17,7 +16,8 @@
           "100": "#9D9D9D"
         },
         "blue": {
-          "100": "#d6f7f7"
+          "100": "#d6f7f7",
+          "200": "#31D6D6"
         },
         "pink": {
           "100": "#FFDDDD"
@@ -25,6 +25,9 @@
         "boxShadows": {
           "100": "0px 7px 15px rgba(0, 0, 0, 0.07)",
           "200": "20px 0px 40px rgba(138, 155, 176, 0.25)"
+        },
+        "border": {
+          "100": "rgba(157, 157, 157, 0.4)"
         }
       },
       "font": "Tinos"
