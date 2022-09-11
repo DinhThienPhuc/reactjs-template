@@ -18,6 +18,8 @@ interface IProps {
   title?: ReactNode | string;
   className?: string;
   hasSearchBox?: boolean;
+  onClickLeftIcon?: () => void;
+  onClickRightIcon?: () => void;
 }
 
 const Header = ({
@@ -28,6 +30,8 @@ const Header = ({
   title,
   className,
   hasSearchBox = false,
+  onClickLeftIcon,
+  onClickRightIcon,
 }: IProps) => {
   const { t } = useTranslation();
   const [value, setValue] = useState<string>("");
@@ -42,6 +46,7 @@ const Header = ({
             setValue(e.target.value);
           }}
           leftIcon={<Icons.Search />}
+          placeholder={t("placeholders.searchHere")}
         />
       );
     }
@@ -85,11 +90,17 @@ const Header = ({
         hasLeftIcon={hasLeftIcon}
         hasRightIcon={hasRightIcon}
       >
-        <div className={cx("header-icon", "header-icon__left")}>
+        <div
+          className={cx("header-icon", "header-icon__left")}
+          onClick={onClickLeftIcon}
+        >
           {customLeftIcon}
         </div>
         {customTitle}
-        <div className={cx("header-icon", "header-icon__right")}>
+        <div
+          className={cx("header-icon", "header-icon__right")}
+          onClick={onClickRightIcon}
+        >
           {customRightIcon}
         </div>
       </Styled.Wrap>

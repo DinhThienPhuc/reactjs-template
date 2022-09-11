@@ -9,6 +9,7 @@ import cx from "classnames";
 interface IProps {
   onChange?: ChangeEventHandler<HTMLInputElement>;
   onFocus?: FocusEventHandler<HTMLInputElement>;
+  placeholder?: string;
   value?: string;
   className?: string;
   leftIcon?: ReactNode;
@@ -20,6 +21,7 @@ const Input = ({
   value,
   onChange,
   onFocus,
+  placeholder = "",
   leftIcon,
   rightIcon,
 }: IProps) => {
@@ -35,6 +37,7 @@ const Input = ({
         value={value}
         onChange={onChange}
         onFocus={onFocus}
+        placeholder={placeholder}
       />
       <div className={cx("input-icon", "input-icon__right")}>{rightIcon}</div>
     </Styled.Input>

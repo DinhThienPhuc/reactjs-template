@@ -15,7 +15,9 @@ const Setting = () => {
         leftIcon={<Icons.ArrowLeft />}
         title={t("header.settings")}
       />
-      <Styled.Setting></Styled.Setting>
+      <Styled.Setting>
+        <Styled.Paper></Styled.Paper>
+      </Styled.Setting>
     </>
   );
 };

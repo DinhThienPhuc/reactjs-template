@@ -19,7 +19,7 @@ const Styled = {
     z-index: ${DEFAULT_LAYOUT_SIZE.Z_VALUE};
     height: ${DEFAULT_LAYOUT_SIZE.NAVIGATOR_HEIGHT}px;
     background: ${({ theme }) => theme.colors.white};
-    box-shadow: ${({ theme }) => theme.colors.boxShadow};
+    box-shadow: ${({ theme }) => theme.colors.boxShadows["200"]};
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +30,7 @@ const Styled = {
     border-bottom-left-radius: ${DEFAULT_LAYOUT_SIZE.NAVIGATOR_MAIN_BUTTON_WRAP}px;
     border-bottom-right-radius: ${DEFAULT_LAYOUT_SIZE.NAVIGATOR_MAIN_BUTTON_WRAP}px;
     background: ${({ theme }) => theme.colors.body};
-    box-shadow: inset ${({ theme }) => theme.colors.boxShadow};
+    box-shadow: inset ${({ theme }) => theme.colors.boxShadows["200"]};
     position: fixed;
     left: calc(50% - ${DEFAULT_LAYOUT_SIZE.NAVIGATOR_MAIN_BUTTON_WRAP / 2}px);
     bottom: ${DEFAULT_LAYOUT_SIZE.NAVIGATOR_HEIGHT -

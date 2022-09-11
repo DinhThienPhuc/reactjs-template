@@ -20,7 +20,8 @@
       "version": "Version",
       "greeting": "{{name}}, Good {{time}}",
       "mainTitle": "Find out the best password for life.",
-      "title": "High calories foods"
+      "title": "High calories foods",
+      "result": "Result"
     }
   }
 }
