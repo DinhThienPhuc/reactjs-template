@@ -24,7 +24,8 @@
       "result": "Result",
       "notification": "Notification",
       "privacy": "Privacy",
-      "security": "Security"
+      "security": "Security",
+      "logOut": "Log out"
     }
   }
 }

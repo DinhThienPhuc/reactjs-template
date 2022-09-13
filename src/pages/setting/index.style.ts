@@ -6,7 +6,7 @@ import styled from "styled-components";
 const Styled = {
   Setting: styled.div``,
   Paper: styled.div`
-    height: 460px;
+    height: fit-content;
     width: 100%;
     background: ${({ theme }) => theme.colors.white};
     box-shadow: ${({ theme }) => theme.colors.boxShadows["100"]};
@@ -22,8 +22,11 @@ const Styled = {
     line-height: 24px;
     height: 30px;
     border-bottom: 1px solid ${({ theme }) => theme.colors.border["100"]};
-    margin-bottom: 50px;
     padding: 0px 5px;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
   `,
   Icon: styled.div`
     width: 24px;

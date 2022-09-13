@@ -6,6 +6,8 @@ import { ReactComponent as Camera } from "./camera.svg";
 import { ReactComponent as FileText } from "./file-text.svg";
 import { ReactComponent as HelpCircle } from "./help-circle.svg";
 import { ReactComponent as Home } from "./home.svg";
+import { ReactComponent as LogOut } from "./log-out.svg";
+import { ReactComponent as Mail } from "./mail.svg";
 import { ReactComponent as Maximize } from "./maximize.svg";
 import { ReactComponent as Minus } from "./minus.svg";
 import { ReactComponent as Search } from "./search.svg";
@@ -22,6 +24,8 @@ const Icons = {
   FileText,
   HelpCircle,
   Home,
+  LogOut,
+  Mail,
   Maximize,
   Minus,
   Search,
