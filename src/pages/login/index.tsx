@@ -1,6 +1,8 @@
 /* PAGE: LOGIN
    ========================================================================== */
 
+import Images from "assets/images";
+import Styled from "./index.style";
 import { useCallback } from "react";
 import { useSessionStorage } from "hooks";
 
@@ -15,10 +17,11 @@ const Login = () => {
   }, [setRefreshToken]);
 
   return (
-    <>
+    <Styled.Login>
+      <Images.Svg.Logo width={63} height={63} />
       <p>Login page</p>
       <button onClick={handleLogin}>Login</button>
-    </>
+    </Styled.Login>
   );
 };
 
