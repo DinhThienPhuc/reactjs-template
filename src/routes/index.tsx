@@ -4,7 +4,6 @@
 import AuthRoute from "containers/auth/auth-route";
 import LayoutDefault from "containers/layouts/default";
 import Loading from "containers/loadable-fallback/loading";
-import { ROUTES } from "utils/constants";
 import { RouteObject } from "react-router-dom";
 import loadable from "@loadable/component";
 
@@ -29,6 +28,15 @@ const Login = loadable(() => import("pages/login"), {
 const NotFound = loadable(() => import("pages/not-found"), {
   fallback: <Loading />,
 });
+
+export enum ROUTES {
+  HOME = "/",
+  NOT_FOUND = "*",
+  LOGIN = "/login",
+  SEARCH = "/search",
+  SETTING = "/setting",
+  PROFILE = "/profile",
+}
 
 /**
  * Use <AuthRoute /> to protect authenticate pages

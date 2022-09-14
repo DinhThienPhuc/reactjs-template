@@ -3,7 +3,7 @@
 
 import { Navigate, useLocation } from "react-router-dom";
 
-import { ROUTES } from "utils/constants";
+import { ROUTES } from "routes";
 import { useMemo } from "react";
 import useSessionStorage from "hooks/useSessionStorage";
 

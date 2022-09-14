@@ -2,7 +2,7 @@
    ========================================================================== */
 
 import { NavLink } from "react-router-dom";
-import { ROUTES } from "utils/constants";
+import { ROUTES } from "routes";
 import Styled from "./navigator.style";
 import { useLocation } from "react-router-dom";
 

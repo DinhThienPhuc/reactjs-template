@@ -5,7 +5,7 @@ import { useCallback, useMemo } from "react";
 
 import Icons from "assets/icons";
 import Images from "assets/images";
-import { ROUTES } from "utils/constants";
+import { ROUTES } from "routes";
 import Styled from "./index.style";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "services/i18n";

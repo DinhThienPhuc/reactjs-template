@@ -1,7 +1,7 @@
-/* LAYOUT NAVIGATOR COMPONENT STYLES
+/* LAYOUT NAVIGATOR COMPONENT STYLE
    ========================================================================== */
 
-import { DEFAULT_LAYOUT_SIZE } from "utils/constants";
+import { DEFAULT_LAYOUT_SIZE } from "containers/layouts/default.utils";
 import Icons from "assets/icons";
 import styled from "styled-components";
 
