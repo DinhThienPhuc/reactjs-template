@@ -8,37 +8,49 @@ import Images from "assets/images";
 import { ROUTES } from "routes";
 import Styled from "./index.style";
 import { useNavigate } from "react-router-dom";
+import { useSessionStorage } from "hooks";
 import { useTranslation } from "services/i18n";
-
-const PROFILES_ITEMS = [
-  {
-    icon: <Icons.User />,
-    label: null,
-    key: "username",
-  },
-  {
-    icon: <Icons.Mail />,
-    label: null,
-    key: "email",
-  },
-  {
-    icon: <Icons.LogOut />,
-    label: "texts.logOut",
-  },
-];
 
 const Profile = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
+  const [, setRefreshToken] = useSessionStorage<string | null>(
+    "refresh-token",
+    null,
+  );
+
+  const profileItems = useMemo(
+    () => [
+      {
+        icon: <Icons.User />,
+        label: null,
+        key: "username",
+      },
+      {
+        icon: <Icons.Mail />,
+        label: null,
+        key: "email",
+      },
+      {
+        icon: <Icons.LogOut />,
+        label: "texts.logOut",
+        onClick: () => {
+          setRefreshToken(null);
+        },
+      },
+    ],
+    [setRefreshToken],
+  );
+
   const content = useMemo(() => {
-    return PROFILES_ITEMS.map((item) => (
-      <Styled.Item key={item.label}>
+    return profileItems.map((item) => (
+      <Styled.Item key={item.label} onClick={item?.onClick}>
         <Styled.Icon>{item.icon}</Styled.Icon>
         {item.label ? t(item.label) : item.key}
       </Styled.Item>
     ));
-  }, [t]);
+  }, [profileItems, t]);
 
   const goBack = useCallback(() => {
     navigate(ROUTES.HOME);

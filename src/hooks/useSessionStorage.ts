@@ -1,40 +1,6 @@
 /* HOOK: USE_SESSION_STORAGE
    ========================================================================== */
 
-/**
- * Persist the state with session storage so that it remains after a page refresh
- * but will be removed when tab closed.
- * This can be useful for recording session information.
- * This hook is used in the same way as useState except that you must pass
- * the storage key in the 1st parameter. If the window object is not present (as in SSR),
- * useSessionStorage() will return the default value.
- *
- * @param key the storage key
- * @param initialValue default value if not specific
- * @returns a set of value and callback to modify value
- *
- * @example
- * ```
- * import React from 'react'
- * import { useLocalStorage } from 'usehooks-ts'
- *
- * // Usage
- * export default function Component() {
- *    const [isDarkTheme, setDarkTheme] = useSessionStorage('darkTheme', true)
- *
- *    const toggleTheme = () => {
- *        setDarkTheme(prevValue => !prevValue)
- *    }
- *
- *    return (
- *        <button onClick={toggleTheme}>
- *            {`The current theme is ${isDarkTheme ? `dark` : `light`}`}
- *        </button>
- *    )
- * }
- * ```
- */
-
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 import { parseJSON } from "utils/functions";
@@ -44,7 +10,7 @@ type SetValue<T> = Dispatch<SetStateAction<T>>;
 
 const useSessionStorage = <T>(
   key: string,
-  initialValue: T
+  initialValue: T,
 ): [T, SetValue<T>] => {
   // Get from session storage then parse stored json or return initialValue
   const readValue = (): T => {
@@ -72,7 +38,7 @@ const useSessionStorage = <T>(
     // Prevent build error "window is undefined"
     if (typeof window == "undefined") {
       console.warn(
-        `Tried setting sessionStorage key “${key}” even though environment is not a client`
+        `Tried setting sessionStorage key “${key}” even though environment is not a client`,
       );
     }
 

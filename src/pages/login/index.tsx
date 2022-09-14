@@ -7,11 +7,11 @@ import { useSessionStorage } from "hooks";
 const Login = () => {
   const [, setRefreshToken] = useSessionStorage<string | null>(
     "refresh-token",
-    null
+    null,
   );
 
   const handleLogin = useCallback(() => {
-    setRefreshToken("as");
+    setRefreshToken("test");
   }, [setRefreshToken]);
 
   return (
