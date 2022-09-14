@@ -15,12 +15,15 @@ const Styled = {
     }
   `,
   Paper: styled.div`
+    position: absolute;
+    top: ${304 - DEFAULT_LAYOUT_SIZE.HEADER_HEIGHT - 15 - 44}px;
     height: fit-content;
     width: 100%;
     background: ${({ theme }) => theme.colors.white};
     box-shadow: ${({ theme }) => theme.colors.boxShadows["100"]};
     border-radius: 10px;
     padding: 60px 52px;
+    z-index: ${DEFAULT_LAYOUT_SIZE.Z_VALUE};
   `,
   Item: styled.div`
     display: flex;
@@ -57,8 +60,9 @@ const Styled = {
     }
   `,
   Avatar: styled.div`
-    width: 200px;
-    height: 200px;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
