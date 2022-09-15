@@ -222,3 +222,8 @@ chmod ug+x .husky/*
 ## API
 
 Feel free to pick up the best fetching stradegy for you project! ✨✨✨
+
+## Other rules
+
+- For components: use almost styled-css for styling
+- For pages: reduce the use of styled-css
