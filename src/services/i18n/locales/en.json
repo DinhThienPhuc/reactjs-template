@@ -8,7 +8,10 @@
       "back": "Back"
     },
     "placeholders": {
-      "searchHere": "Search here"
+      "searchHere": "Search here",
+      "enterYourEmail": "Enter your email",
+      "enterMobileNumber": "Enter mobile number",
+      "password": "Password"
     },
     "texts": {
       "profile": "Profile",
@@ -25,7 +28,10 @@
       "notification": "Notification",
       "privacy": "Privacy",
       "security": "Security",
-      "logOut": "Log out"
+      "logOut": "Log out",
+      "logIn": "Log In",
+      "signUp": "Sign Up",
+      "logInDescription": "Let’s sign up to your account and start your calorie management"
     }
   }
 }

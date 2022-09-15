@@ -1,12 +1,18 @@
 /* COMPONENT: INPUT
    ========================================================================== */
 
-import { ChangeEventHandler, FocusEventHandler, ReactNode } from "react";
+import {
+  ChangeEventHandler,
+  FocusEventHandler,
+  InputHTMLAttributes,
+  ReactNode,
+  forwardRef,
+} from "react";
 
 import Styled from "./input.style";
 import cx from "classnames";
 
-interface IProps {
+interface IProps extends InputHTMLAttributes<HTMLInputElement> {
   onChange?: ChangeEventHandler<HTMLInputElement>;
   onFocus?: FocusEventHandler<HTMLInputElement>;
   placeholder?: string;
@@ -16,32 +22,34 @@ interface IProps {
   rightIcon?: ReactNode;
 }
 
-const Input = ({
-  className,
-  value,
-  onChange,
-  onFocus,
-  placeholder = "",
-  leftIcon,
-  rightIcon,
-}: IProps) => {
+const Input = forwardRef<HTMLInputElement, IProps>((props, ref) => {
   return (
     <Styled.Input
-      className={cx("input", className)}
-      hasLeftIcon={!!leftIcon}
-      hasRightIcon={!!rightIcon}
+      className={cx("input", props.className)}
+      hasLeftIcon={!!props.leftIcon}
+      hasRightIcon={!!props.rightIcon}
     >
-      <div className={cx("input-icon", "input-icon__left")}>{leftIcon}</div>
-      <input
+      <Styled.IconLeft className={cx("input-icon__left")}>
+        {props.leftIcon}
+      </Styled.IconLeft>
+      <Styled.InputBox
         className={cx("input-box")}
-        value={value}
-        onChange={onChange}
-        onFocus={onFocus}
-        placeholder={placeholder}
+        value={props.value}
+        onChange={props.onChange}
+        onFocus={props.onFocus}
+        placeholder={props.placeholder}
+        ref={ref}
+        hasLeftIcon={!!props.leftIcon}
+        hasRightIcon={!!props.rightIcon}
+        {...props}
       />
-      <div className={cx("input-icon", "input-icon__right")}>{rightIcon}</div>
+      <Styled.IconRight className={cx("input-icon__right")}>
+        {props.rightIcon}
+      </Styled.IconRight>
     </Styled.Input>
   );
-};
+});
+
+Input.displayName = "Input";
 
 export default Input;
