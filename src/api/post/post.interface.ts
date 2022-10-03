@@ -1,4 +1,4 @@
-/* POST API INTERFACES
+/* API INTERFACE: POST
    ========================================================================== */
 
 import { IBaseResponse } from "../interfaces";

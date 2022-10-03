@@ -1,4 +1,4 @@
-/* SELECT COMPONENT STYLES
+/* COMPONENT STYLE: SELECT 
    ========================================================================== */
 
 import styled from "styled-components";

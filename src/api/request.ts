@@ -1,4 +1,4 @@
-/* BASE REQUEST INTERCEPTORS CONFIG
+/* API REQUEST
    ========================================================================== */
 
 import axios, { AxiosError } from "axios";
@@ -42,7 +42,7 @@ requestWithJwt.interceptors.response.use(
     return Promise.reject({
       ...error.response?.data,
     });
-  }
+  },
 );
 
 /**
@@ -62,5 +62,5 @@ requestWithoutJwt.interceptors.response.use(
     return Promise.reject({
       ...error.response?.data,
     });
-  }
+  },
 );

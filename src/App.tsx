@@ -7,7 +7,7 @@ import "services/i18n";
 
 import { BrowserRouter, useRoutes } from "react-router-dom";
 
-import ErrorBoundary from "containers/error-boundary/error-boundary";
+import { ErrorBoundary } from "@dinhthienphuc/artemis/src/containers";
 import { ThemesProvider } from "services/styled-themes";
 import { reload } from "utils/functions";
 import routes from "routes";

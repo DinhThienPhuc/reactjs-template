@@ -1,4 +1,4 @@
-/* POST API REQUESTS
+/* API: POST
    ========================================================================== */
 
 import { IPostListResponse, IPostResponse } from "./post.interface";
@@ -11,7 +11,7 @@ export const getPosts = (): Promise<AxiosResponse<IPostListResponse>> => {
 };
 
 export const getPostById = (
-  id: string
+  id: string,
 ): Promise<AxiosResponse<IPostResponse>> => {
   return requestWithoutJwt.get<IPostResponse>(`/posts/${id}`);
 };

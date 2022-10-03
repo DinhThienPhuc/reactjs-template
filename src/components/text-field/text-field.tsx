@@ -1,4 +1,4 @@
-/* TEXT-FIELD COMPONENT
+/* COMPONENT: TEXT-FIELD
    ========================================================================== */
 
 import Styled from "./text-field.style";

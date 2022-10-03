@@ -15,7 +15,7 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [refreshToken, setRefreshToken] = useSessionStorage<string | null>(
     "refresh-token",
-    null
+    null,
   );
 
   const activateLink = useCallback((isLastItem?: boolean) => {
@@ -38,10 +38,10 @@ const Navbar = () => {
       try {
         await i18n.changeLanguage(e.target.value);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     },
-    [i18n]
+    [i18n],
   );
 
   const handleThemeSwitch = useCallback(async () => {
@@ -49,7 +49,7 @@ const Navbar = () => {
       const newTheme = theme === "dark" ? "light" : "dark";
       setTheme(newTheme);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   }, [setTheme, theme]);
 

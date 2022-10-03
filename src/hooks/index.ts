@@ -1,5 +1,6 @@
-import useEventListener from "./useEventListener";
-import useHover from "./useHover";
-import useSessionStorage from "./useSessionStorage";
+/* HOOKS ENTRY
+   ========================================================================== */
 
-export { useEventListener, useHover, useSessionStorage };
+import hooks from "@dinhthienphuc/artemis/src/hooks";
+
+export default hooks;

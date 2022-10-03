@@ -1,4 +1,4 @@
-/* TEXT-FIELD COMPONENT STYLES
+/* COMPONENT STYLE: TEXT-FIELD
    ========================================================================== */
 
 import styled from "styled-components";

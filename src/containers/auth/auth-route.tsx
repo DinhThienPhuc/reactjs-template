@@ -1,4 +1,4 @@
-/* PRIVATE ROUTE: AUTHENTICATION
+/* CONTAINER: AUTH_ROUTE
    ========================================================================== */
 
 import { Navigate, useLocation } from "react-router-dom";
@@ -25,7 +25,7 @@ const AuthRoute = ({ children }: IAuthRouteProps) => {
    */
   const [refreshToken] = useSessionStorage<string | null>(
     "refresh-token",
-    null
+    null,
   );
 
   const isAuthenticated = useMemo(() => {
