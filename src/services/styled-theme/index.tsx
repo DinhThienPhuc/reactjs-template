@@ -12,7 +12,7 @@ interface IProps {
 }
 
 const StyledThemeProvider = ({ children }: IProps) => (
-  <ThemesProvider schemas={schema} defaultTheme={"light"}>
+  <ThemesProvider schema={schema} defaultTheme={"light"}>
     {children}
   </ThemesProvider>
 );
