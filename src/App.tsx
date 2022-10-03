@@ -6,11 +6,12 @@ import "assets/styles/global.css";
 import "services/i18n";
 
 import { BrowserRouter, useRoutes } from "react-router-dom";
+import { ErrorBoundary, styledTheme } from "@dinhthienphuc/artemis";
 
-import { ErrorBoundary } from "@dinhthienphuc/artemis/src/containers";
-import { ThemesProvider } from "services/styled-themes";
 import { reload } from "utils/functions";
 import routes from "routes";
+
+const { ThemesProvider } = styledTheme;
 
 /**
  * Entry point for route component
