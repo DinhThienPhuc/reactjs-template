@@ -4,7 +4,7 @@
 import axios, { AxiosError } from "axios";
 
 import { IBaseErrorResponse } from "./interfaces";
-import { getFromSessionStorage } from "utils/functions";
+import { getFromSessionStorage } from "utils/helpers";
 
 /**
  * Authenticated Request Interceptors config

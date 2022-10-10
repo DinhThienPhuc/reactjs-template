@@ -1,4 +1,4 @@
 /* GLOBAL CONSTANTS
    ========================================================================== */
 
-export const APP_NAME = "";
+export { SPECIAL_VALUE } from "@dinhthienphuc/artemis";

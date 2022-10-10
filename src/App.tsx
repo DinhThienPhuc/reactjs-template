@@ -8,7 +8,7 @@ import "services/i18n";
 import { BrowserRouter, useRoutes } from "react-router-dom";
 import { ErrorBoundary, styledTheme } from "@dinhthienphuc/artemis";
 
-import { reload } from "utils/functions";
+import { reload } from "utils/helpers";
 import routes from "routes";
 
 const { ThemesProvider } = styledTheme;
