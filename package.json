@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@dinhthienphuc/artemis": "^0.1.6",
+    "@dinhthienphuc/artemis": "^0.1.7",
     "@loadable/component": "^5.15.2",
     "@reduxjs/toolkit": "^1.7.1",
     "@types/node": "^16.7.13",

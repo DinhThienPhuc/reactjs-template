@@ -1177,10 +1177,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-12.0.0.tgz#a9583a75c3f150667771f30b60d9f059473e62c4"
   integrity sha512-M0qqxAcwCsIVfpFQSlGN5XjXWu8l5JDZN+fPt1LeW5SZexQTgnaEvgXAY+CeygRw0EeppWHi12JxESWiWrB0Sg==
 
-"@dinhthienphuc/artemis@^0.1.6":
-  version "0.1.6"
-  resolved "https://npm.pkg.github.com/download/@dinhthienphuc/artemis/0.1.6/279345f1e50c1069f46b52b8b7303c375546b027#279345f1e50c1069f46b52b8b7303c375546b027"
-  integrity sha512-sPCw5M8eutJnXrSYqCAfm403/1hPtgUKVemlY/7Ga4pyz+ommQBFVxMgs12w+M3ovrJExg7xM4ZQbcEJlAIVHw==
+"@dinhthienphuc/artemis@^0.1.7":
+  version "0.1.7"
+  resolved "https://npm.pkg.github.com/download/@dinhthienphuc/artemis/0.1.7/ec30ea31f1d070af56ecf7bc1f117eb68d581b90#ec30ea31f1d070af56ecf7bc1f117eb68d581b90"
+  integrity sha512-fgbnndy5tGmUDhpz+Rd0fhSo27EvZmu1EgDRQEV9pGdAwSXUA6kJifA2PLnYrvhZOHmZQ7d4q4KeaR741LRiAg==
   dependencies:
     classnames "^2.3.2"
     i18next "^21.9.2"
