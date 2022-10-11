@@ -21,6 +21,7 @@ export const parseJSON = <T>(jsonString: string | null): T | null => {
   try {
     return jsonString === "undefined" ? null : JSON.parse(jsonString ?? "");
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.log("Parsing error on ", { jsonString });
     return null;
   }

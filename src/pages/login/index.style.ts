@@ -1,4 +1,5 @@
-import { Input } from "components";
+import { Button, Input } from "components";
+
 import styled from "styled-components";
 
 const Styled = {
@@ -26,6 +27,7 @@ const Styled = {
   Input: styled(Input)`
     margin-bottom: 55px;
   `,
+  LoginButton: styled(Button)``,
 };
 
 export default Styled;

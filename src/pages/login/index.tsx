@@ -6,16 +6,23 @@ import Images from "assets/images";
 import Styled from "./index.style";
 import { useCallback } from "react";
 import { useForm } from "react-hook-form";
+import { useSessionStorage } from "hooks";
 import { useTranslation } from "services/i18n";
 
 const Login = () => {
   const { t } = useTranslation();
-
   const { register, handleSubmit } = useForm();
+  const [, setRefreshToken] = useSessionStorage<string | null>(
+    "refresh-token",
+    null,
+  );
 
-  const onSubmit = useCallback(() => {
-    // setRefreshToken(`${data?.email}-${data?.password}`);
-  }, []);
+  const onSubmit = useCallback(
+    (data: any) => {
+      setRefreshToken(`${data?.email}-${data?.password}`);
+    },
+    [setRefreshToken],
+  );
 
   return (
     <Styled.Login>
@@ -34,7 +41,7 @@ const Login = () => {
           type={"password"}
           placeholder={t("placeholders.password")}
         />
-        <Button type="submit">Login</Button>
+        <Button type={"submit"}>Login</Button>
       </form>
     </Styled.Login>
   );

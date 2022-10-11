@@ -1,7 +1,7 @@
 /* BUTTON COMPONENT STYLES
    ========================================================================== */
 
-import { Color, Size } from "./button.utils";
+import { Size, Variant } from "./button.utils";
 import styled, { css } from "styled-components";
 
 const sizeModify = (props: any) => {
@@ -26,20 +26,30 @@ const sizeModify = (props: any) => {
   `;
 };
 
-const colorModify = (props: any) => {
-  if (props?.color === Color.Error) {
+const variantModify = (props: any) => {
+  if (props?.variant === Variant.Contained) {
     return css`
-      color: ${({ theme }) => theme.colors.red};
-      border: 1px solid ${({ theme }) => theme.colors.red};
+      color: ${({ theme }) => theme.colors.white};
+      background-color: ${({ theme }) => theme.colors.green["300"]};
+      border: 1px solid ${({ theme }) => theme.colors.green["300"]};
+    `;
+  }
+  if (props?.variant === Variant.Outlined) {
+    return css`
+      color: ${({ theme }) => theme.colors.black["100"]};
+      background-color: transparent;
+      border: 1px solid ${({ theme }) => theme.colors.green["300"]};
     `;
   }
   return css`
-    border: 1px solid ${({ theme }) => theme.colors.gray1};
+    color: ${({ theme }) => theme.colors.black["100"]};
+    background-color: transparent;
+    border: 1px solid transparent;
   `;
 };
 
 const Styled = {
-  Container: styled.button<{ size: Size; color: Color }>`
+  Container: styled.button<{ size: Size; variant: Variant }>`
     transition: all 0.2s ease;
     background-color: ${({ theme }) => theme.colors.white};
     box-shadow: none;
@@ -47,7 +57,7 @@ const Styled = {
     overflow: hidden;
     cursor: pointer;
     ${sizeModify};
-    ${colorModify};
+    ${variantModify};
 
     &:hover,
     &:focus {

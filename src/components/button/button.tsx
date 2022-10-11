@@ -1,13 +1,13 @@
 /* BUTTON COMPONENT
    ========================================================================== */
 
-import { Color, IProps, Size } from "./button.utils";
+import { IProps, Size, Variant } from "./button.utils";
 import { MouseEvent, useCallback } from "react";
 
 import Styled from "./button.style";
 
 const Button = ({
-  color = Color.Primary,
+  variant = Variant.Text,
   size = Size.Medium,
   className,
   children,
@@ -23,7 +23,7 @@ const Button = ({
   return (
     <Styled.Container
       className={className}
-      color={color}
+      variant={variant}
       size={size}
       onClick={handleClick}
     >

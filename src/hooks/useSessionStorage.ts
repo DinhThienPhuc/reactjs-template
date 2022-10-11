@@ -23,6 +23,7 @@ const useSessionStorage = <T>(
       const item = window.sessionStorage.getItem(key);
       return item ? (parseJSON(item) as T) : initialValue;
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.warn(`Error reading sessionStorage key “${key}”:`, error);
       return initialValue;
     }
@@ -37,6 +38,7 @@ const useSessionStorage = <T>(
   const setValue: SetValue<T> = (value) => {
     // Prevent build error "window is undefined"
     if (typeof window == "undefined") {
+      // eslint-disable-next-line no-console
       console.warn(
         `Tried setting sessionStorage key “${key}” even though environment is not a client`,
       );
@@ -55,6 +57,7 @@ const useSessionStorage = <T>(
       // We dispatch a custom event so every useSessionStorage hook are notified
       window.dispatchEvent(new Event("session-storage"));
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.warn(`Error setting sessionStorage key “${key}”:`, error);
     }
   };
