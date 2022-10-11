@@ -1,8 +1,8 @@
-/* LAYOUT NAVIGATOR COMPONENT STYLE
+/* CONTAINER STYLE: LAYOUT NAVIGATOR
    ========================================================================== */
 
-import { DEFAULT_LAYOUT_SIZE } from "containers/layouts/default.utils";
-import Icons from "assets/icons";
+import { DEFAULT_LAYOUT_SIZE } from "../default.utils";
+import { Icons } from "components";
 import styled from "styled-components";
 
 const applyNavigatorIconStyle = (props: any) =>
@@ -89,7 +89,7 @@ const Styled = {
   Search: styled(Icons.Search)<{ isActive?: boolean }>`
     color: ${applyNavigatorIconStyle};
   `,
-  Setting: styled(Icons.Setting)<{ isActive?: boolean }>`
+  Setting: styled(Icons.Settings)<{ isActive?: boolean }>`
     color: ${applyNavigatorIconStyle};
   `,
   Profile: styled(Icons.User)<{ isActive?: boolean }>`

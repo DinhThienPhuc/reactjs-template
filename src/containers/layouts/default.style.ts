@@ -1,7 +1,7 @@
 /* CONTAINER STYLE: LAYOUT DEFAULT
    ========================================================================== */
 
-import { DEFAULT_LAYOUT_SIZE } from "containers/layouts/default.utils";
+import { DEFAULT_LAYOUT_SIZE } from "./default.utils";
 import styled from "styled-components";
 
 const Styled = {

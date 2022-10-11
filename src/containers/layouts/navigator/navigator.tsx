@@ -1,4 +1,4 @@
-/* LAYOUT NAVIGATOR COMPONENT
+/* CONTAINER: LAYOUT NAVIGATOR
    ========================================================================== */
 
 import { NavLink } from "react-router-dom";

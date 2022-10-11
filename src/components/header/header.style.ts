@@ -2,7 +2,7 @@
    ========================================================================== */
 
 import { DEFAULT_LAYOUT_SIZE } from "containers/layouts/default.utils";
-import Icons from "assets/icons";
+import { Icons } from "components";
 import styled from "styled-components";
 
 const Styled = {

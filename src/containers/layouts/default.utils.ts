@@ -1,4 +1,4 @@
-/* LAYOUT DEFAULT UTILS: Interfaces, Types, Constants, Functions, etc
+/* CONTAINER UTILS: LAYOUT DEFAULT
    ========================================================================== */
 
 /* Interfaces & Types
@@ -6,7 +6,6 @@
 
 /* Constants
    ========================================================================== */
-
 export const DEFAULT_LAYOUT_SIZE = {
   HEADER_HEIGHT: 82,
   NAVIGATOR_HEIGHT: 80,
@@ -16,5 +15,5 @@ export const DEFAULT_LAYOUT_SIZE = {
   PADDING_HORIZONTAL: 24,
 };
 
-/* Functions
+/* Helpers
    ========================================================================== */
