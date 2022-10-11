@@ -1,9 +1,8 @@
-/* ROUTES: ENTRY
+/* ROUTES ENTRY
    ========================================================================== */
 
-import AuthRoute from "containers/auth/auth-route";
-import LayoutDefault from "containers/layouts/default";
-import Loading from "containers/loadable-fallback/loading";
+import { AuthRoute, LayoutDefault, Loading } from "containers";
+
 import ROUTES from "./constant";
 import { RouteObject } from "react-router-dom";
 import loadable from "@loadable/component";

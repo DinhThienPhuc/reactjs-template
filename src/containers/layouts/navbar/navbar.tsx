@@ -1,4 +1,4 @@
-/* LAYOUT NAVBAR COMPONENT
+/* CONTAINER: LAYOUT NAVBAR
    ========================================================================== */
 
 import { useCallback, useMemo } from "react";
@@ -6,14 +6,14 @@ import { useCallback, useMemo } from "react";
 import { NavLink } from "react-router-dom";
 import { Select } from "components";
 import Styled from "./navbar.style";
-import { useSessionStorage } from "hooks";
-import { useTheme } from "services/styled-themes";
+import { useLocalStorage } from "hooks";
+import { useTheme } from "services/styled-theme";
 import { useTranslation } from "services/i18n";
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
   const { theme, setTheme } = useTheme();
-  const [refreshToken, setRefreshToken] = useSessionStorage<string | null>(
+  const [refreshToken, setRefreshToken] = useLocalStorage<string | null>(
     "refresh-token",
     null,
   );

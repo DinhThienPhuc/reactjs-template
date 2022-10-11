@@ -1,4 +1,4 @@
-/* LAYOUT FOOTER COMPONENT
+/* CONTAINER: LAYOUT FOOTER
    ========================================================================== */
 
 import Styled from "./footer.style";

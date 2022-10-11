@@ -4,7 +4,7 @@
 import axios, { AxiosError } from "axios";
 
 import { IBaseErrorResponse } from "./interfaces";
-import { getFromSessionStorage } from "utils/helpers";
+import { getFromLocalStorage } from "utils/helpers";
 
 /**
  * Authenticated Request Interceptors config
@@ -16,7 +16,7 @@ export const requestWithJwt = axios.create({
 });
 
 requestWithJwt.interceptors.request.use(async (config) => {
-  const refreshToken = getFromSessionStorage<string | null>("refresh-token");
+  const refreshToken = getFromLocalStorage<string | null>("refresh-token");
 
   return {
     ...config,

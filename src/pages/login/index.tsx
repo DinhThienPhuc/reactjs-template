@@ -2,12 +2,12 @@
    ========================================================================== */
 
 import { useCallback } from "react";
-import { useSessionStorage } from "hooks";
+import { useLocalStorage } from "hooks";
 
 const Login = () => {
-  const [, setRefreshToken] = useSessionStorage<string | null>(
+  const [, setRefreshToken] = useLocalStorage<string | null>(
     "refresh-token",
-    null
+    null,
   );
 
   const handleLogin = useCallback(() => {

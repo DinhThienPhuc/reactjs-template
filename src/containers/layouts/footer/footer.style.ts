@@ -1,4 +1,4 @@
-/* LAYOUT FOOTER COMPONENT STYLES
+/* CONTAINER STYLE: LAYOUT FOOTER 
    ========================================================================== */
 
 import styled from "styled-components";

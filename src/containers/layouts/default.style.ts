@@ -1,4 +1,4 @@
-/* LAYOUT DEFAULT COMPONENT STYLES
+/* CONTAINER STYLE: LAYOUT DEFAULT
    ========================================================================== */
 
 import styled from "styled-components";

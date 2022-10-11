@@ -1,4 +1,4 @@
-/* PAGE STYLES: HOME
+/* PAGE STYLE: HOME
    ========================================================================== */
 
 import styled from "styled-components";

@@ -6,12 +6,11 @@ import "assets/styles/global.css";
 import "services/i18n";
 
 import { BrowserRouter, useRoutes } from "react-router-dom";
-import { ErrorBoundary, styledTheme } from "@dinhthienphuc/artemis";
 
+import { ErrorBoundary } from "containers";
+import { StyledThemeProvider } from "services/styled-theme";
 import { reload } from "utils/helpers";
 import routes from "routes";
-
-const { ThemesProvider } = styledTheme;
 
 /**
  * Entry point for route component
@@ -30,9 +29,9 @@ const App = () => {
   return (
     <ErrorBoundary onReset={reload}>
       <BrowserRouter>
-        <ThemesProvider>
+        <StyledThemeProvider>
           <Main />
-        </ThemesProvider>
+        </StyledThemeProvider>
       </BrowserRouter>
     </ErrorBoundary>
   );

@@ -1,4 +1,4 @@
-/* LAYOUT NAVBAR COMPONENT STYLES
+/* CONTAINER STYLE: LAYOUT NAVBAR
    ========================================================================== */
 
 import styled from "styled-components";

@@ -4,8 +4,8 @@
 import { Navigate, useLocation } from "react-router-dom";
 
 import ROUTES from "routes/constant";
+import { useLocalStorage } from "hooks";
 import { useMemo } from "react";
-import useSessionStorage from "hooks/useSessionStorage";
 
 interface IAuthRouteProps {
   children: JSX.Element;
@@ -23,10 +23,7 @@ const AuthRoute = ({ children }: IAuthRouteProps) => {
    * Authentication logic
    * Feel free to modify authentication logic by saving JWT in cookie or localStorage
    */
-  const [refreshToken] = useSessionStorage<string | null>(
-    "refresh-token",
-    null,
-  );
+  const [refreshToken] = useLocalStorage<string | null>("refresh-token", null);
 
   const isAuthenticated = useMemo(() => {
     return !!refreshToken;
@@ -36,16 +33,16 @@ const AuthRoute = ({ children }: IAuthRouteProps) => {
    * Handle case when user is authenticated but attemp to access Login page
    * -> redirect to Homepage
    */
-  if (isAuthenticated && location.pathname === ROUTES.login) {
-    return <Navigate to={ROUTES.home} />;
+  if (isAuthenticated && location.pathname === ROUTES.LOGIN) {
+    return <Navigate to={ROUTES.HOME} />;
   }
 
   /**
    * Handle case when user is NOT authenticated but attemp to access Privated page
    * -> redirect to Login page
    */
-  if (!isAuthenticated && location.pathname !== ROUTES.login) {
-    return <Navigate to={ROUTES.login} />;
+  if (!isAuthenticated && location.pathname !== ROUTES.LOGIN) {
+    return <Navigate to={ROUTES.LOGIN} />;
   }
 
   /**
