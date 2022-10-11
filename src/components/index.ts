@@ -1,7 +1,15 @@
 /* COMPONENTS ENTRY
    ========================================================================== */
 
-import Select from "./select/select";
-import TextField from "./text-field/text-field";
+import * as ButtonUtils from "./button/button.utils";
 
-export { TextField, Select };
+import Button from "./button/button";
+import Card from "./card/card";
+import Header from "./header/header";
+import Input from "./input/input";
+import Select from "./select/select";
+import Switch from "./switch/switch";
+
+export { Button, Card, Header, Input, Select, Switch };
+
+export { ButtonUtils };
