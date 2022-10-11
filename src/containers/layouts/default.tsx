@@ -1,4 +1,4 @@
-/* LAYOUT DEFAULT COMPONENT
+/* CONTAINER: LAYOUT DEFAULT
    ========================================================================== */
 
 import Navigator from "./navigator/navigator";

@@ -1,4 +1,4 @@
-/* LOADABLE FALLBACK COMPONENT: LOADING
+/* CONTAINER: LOADABLE FALLBACK LOADING
    ========================================================================== */
 
 const Loading = () => {

@@ -1,9 +1,15 @@
-/* SELECT COMPONENT UTILS: Interfaces, Types, Constants, Functions, etc
+/* COMPONENT UTILS: SELECT 
    ========================================================================== */
 
 import { ChangeEventHandler, ReactNode, SelectHTMLAttributes } from "react";
 
-/* Interfaces & Types
+/* Enums
+   ========================================================================== */
+
+/* Types
+   ========================================================================== */
+
+/* Interfaces
    ========================================================================== */
 export interface ISelectOption {
   value: string;
@@ -15,3 +21,9 @@ export interface ISelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   label?: ReactNode | string;
   onChange: ChangeEventHandler;
 }
+
+/* Constants
+   ========================================================================== */
+
+/* Helpers
+   ========================================================================== */

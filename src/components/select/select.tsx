@@ -1,4 +1,4 @@
-/* SELECT COMPONENT
+/* COMPONENT: SELECT
    ========================================================================== */
 
 import { ISelectOption, ISelectProps } from "./select.utils";

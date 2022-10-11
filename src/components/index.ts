@@ -1,3 +1,6 @@
+/* COMPONENTS ENTRY
+   ========================================================================== */
+
 import * as ButtonUtils from "./button/button.utils";
 
 import Button from "./button/button";

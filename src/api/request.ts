@@ -1,10 +1,10 @@
-/* BASE REQUEST INTERCEPTORS CONFIG
+/* API REQUEST
    ========================================================================== */
 
 import axios, { AxiosError } from "axios";
 
 import { IBaseErrorResponse } from "./interfaces";
-import { getFromSessionStorage } from "utils/functions";
+import { getFromLocalStorage } from "utils/helpers";
 
 /**
  * Authenticated Request Interceptors config
@@ -16,7 +16,7 @@ export const requestWithJwt = axios.create({
 });
 
 requestWithJwt.interceptors.request.use(async (config) => {
-  const refreshToken = getFromSessionStorage<string | null>("refresh-token");
+  const refreshToken = getFromLocalStorage<string | null>("refresh-token");
 
   return {
     ...config,
@@ -42,7 +42,7 @@ requestWithJwt.interceptors.response.use(
     return Promise.reject({
       ...error.response?.data,
     });
-  }
+  },
 );
 
 /**
@@ -62,5 +62,5 @@ requestWithoutJwt.interceptors.response.use(
     return Promise.reject({
       ...error.response?.data,
     });
-  }
+  },
 );

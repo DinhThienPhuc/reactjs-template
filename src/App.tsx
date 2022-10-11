@@ -7,9 +7,9 @@ import "services/i18n";
 
 import { BrowserRouter, useRoutes } from "react-router-dom";
 
-import ErrorBoundary from "containers/error-boundary/error-boundary";
-import { ThemesProvider } from "services/styled-themes";
-import { reload } from "utils/functions";
+import { ErrorBoundary } from "containers";
+import { StyledThemeProvider } from "services/styled-theme";
+import { reload } from "utils/helpers";
 import routes from "routes";
 
 /**
@@ -29,9 +29,9 @@ const App = () => {
   return (
     <ErrorBoundary onReset={reload}>
       <BrowserRouter>
-        <ThemesProvider>
+        <StyledThemeProvider>
           <Main />
-        </ThemesProvider>
+        </StyledThemeProvider>
       </BrowserRouter>
     </ErrorBoundary>
   );

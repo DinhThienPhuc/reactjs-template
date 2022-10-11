@@ -1,4 +1,4 @@
-/* LAYOUT DEFAULT COMPONENT STYLE
+/* CONTAINER STYLE: LAYOUT DEFAULT
    ========================================================================== */
 
 import { DEFAULT_LAYOUT_SIZE } from "containers/layouts/default.utils";

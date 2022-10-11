@@ -6,13 +6,13 @@ import Images from "assets/images";
 import Styled from "./index.style";
 import { useCallback } from "react";
 import { useForm } from "react-hook-form";
-import { useSessionStorage } from "hooks";
 import { useTranslation } from "services/i18n";
+import { useLocalStorage } from "hooks";
 
 const Login = () => {
   const { t } = useTranslation();
   const { register, handleSubmit } = useForm();
-  const [, setRefreshToken] = useSessionStorage<string | null>(
+  const [, setRefreshToken] = useLocalStorage<string | null>(
     "refresh-token",
     null,
   );

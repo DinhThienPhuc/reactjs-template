@@ -1,11 +1,11 @@
-/* PRIVATE ROUTE: AUTHENTICATION
+/* CONTAINER: AUTH_ROUTE
    ========================================================================== */
 
 import { Navigate, useLocation } from "react-router-dom";
 
-import { ROUTES } from "routes";
+import ROUTES from "routes/constant";
+import { useLocalStorage } from "hooks";
 import { useMemo } from "react";
-import useSessionStorage from "hooks/useSessionStorage";
 
 interface IAuthRouteProps {
   children: JSX.Element;
@@ -23,10 +23,7 @@ const AuthRoute = ({ children }: IAuthRouteProps) => {
    * Authentication logic
    * Feel free to modify authentication logic by saving JWT in cookie or localStorage
    */
-  const [refreshToken] = useSessionStorage<string | null>(
-    "refresh-token",
-    null,
-  );
+  const [refreshToken] = useLocalStorage<string | null>("refresh-token", null);
 
   const isAuthenticated = useMemo(() => {
     return !!refreshToken;
