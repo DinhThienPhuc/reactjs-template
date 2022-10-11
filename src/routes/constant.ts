@@ -1,10 +1,10 @@
-/* ROUTE CONSTANTS
+/* ROUTES: CONSTANTS
    ========================================================================== */
 
 const ROUTES = {
-  home: "/",
-  notfound: "*",
-  login: "/login",
+  HOME: "/",
+  NOT_FOUND: "*",
+  LOGIN: "/login",
 };
 
 export default ROUTES;

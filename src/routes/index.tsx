@@ -1,4 +1,4 @@
-/* ROUTES COMPONENT
+/* ROUTES: ENTRY
    ========================================================================== */
 
 import AuthRoute from "containers/auth/auth-route";
@@ -26,7 +26,7 @@ const NotFound = loadable(() => import("pages/not-found"), {
  */
 const routes: RouteObject[] = [
   {
-    path: ROUTES.login,
+    path: ROUTES.LOGIN,
     element: (
       <AuthRoute>
         <Login />
@@ -34,7 +34,7 @@ const routes: RouteObject[] = [
     ),
   },
   {
-    path: ROUTES.home,
+    path: ROUTES.HOME,
     element: (
       <AuthRoute>
         <LayoutDefault />
@@ -42,7 +42,7 @@ const routes: RouteObject[] = [
     ),
     children: [
       { index: true, element: <Home /> },
-      { path: ROUTES.notfound, element: <NotFound /> },
+      { path: ROUTES.NOT_FOUND, element: <NotFound /> },
     ],
   },
 ];
