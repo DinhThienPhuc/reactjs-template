@@ -17,7 +17,4 @@ const StyledThemeProvider = ({ children }: IProps) => (
   </ThemesProvider>
 );
 
-export default {
-  StyledThemeProvider,
-  useTheme,
-};
+export { StyledThemeProvider, useTheme };
