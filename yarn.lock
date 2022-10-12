@@ -1192,19 +1192,6 @@
     styled-components "^5.3.3"
     typescript "^4.8.3"
 
-"@dinhthienphuc/gallery@^0.2.19":
-  version "0.2.19"
-  resolved "https://npm.pkg.github.com/download/@dinhthienphuc/gallery/0.2.19/c284db832aa6d38d6eac0eaf9523ec88f1c94ca8#c284db832aa6d38d6eac0eaf9523ec88f1c94ca8"
-  integrity sha512-W8+OPdd4tnzdnowEbTKFi+alCzYNxTz4JYRn6iQcIz1v9e7B2X6YHOKtzBALolJVrEG01hrzmaR0m4LwG1w2fw==
-  dependencies:
-    classnames "^2.3.2"
-    react "^17.0.2"
-    react-dom "^17.0.2"
-    react-feather "^2.0.10"
-    react-scripts "5.0.0"
-    styled-components "^5.3.3"
-    typescript "^4.8.3"
-
 "@discoveryjs/json-ext@^0.5.3":
   version "0.5.6"
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.6.tgz#d5e0706cf8c6acd8c6032f8d54070af261bbbb2f"
@@ -5133,11 +5120,6 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
-
-classnames@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.2.tgz#351d813bf0137fcc6a76a16b88208d2560a0d924"
-  integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==
 
 classnames@^2.3.1, classnames@^2.3.2:
   version "2.3.2"
