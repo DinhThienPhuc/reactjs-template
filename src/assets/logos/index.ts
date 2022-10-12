@@ -1,3 +1,6 @@
+/* LOGOS ENTRY
+   ========================================================================== */
+
 import BIDV from "./bidv.png";
 import Facebook from "./facebook.png";
 import GMail from "./gmail.png";

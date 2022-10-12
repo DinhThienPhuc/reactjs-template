@@ -1,3 +1,6 @@
+/* PAGE STYLE: SIGN_UP
+   ========================================================================== */
+
 import styled from "styled-components";
 
 const Styled = {

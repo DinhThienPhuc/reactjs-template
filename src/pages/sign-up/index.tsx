@@ -1,13 +1,13 @@
-/* PAGE: LOGIN
+/* PAGE: SIGN_UP
    ========================================================================== */
 
 import Images from "assets/images";
 import Styled from "./index.style";
 import { useCallback } from "react";
-import { useSessionStorage } from "hooks";
+import { useLocalStorage } from "hooks";
 
 const Login = () => {
-  const [, setRefreshToken] = useSessionStorage<string | null>(
+  const [, setRefreshToken] = useLocalStorage<string | null>(
     "refresh-token",
     null,
   );

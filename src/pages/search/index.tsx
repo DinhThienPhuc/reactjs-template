@@ -1,10 +1,9 @@
 /* PAGE: SEARCH
    ========================================================================== */
 
-import { Card, Header } from "components";
+import { Card, Header, Icons } from "components";
 import { useCallback, useMemo } from "react";
 
-import Icons from "assets/icons";
 import Logos from "assets/logos";
 import { ROUTES } from "routes";
 import Styled from "./index.style";

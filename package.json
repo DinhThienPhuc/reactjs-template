@@ -31,7 +31,7 @@
     "build:production": "env-cmd -f .env.production react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "husky install && chmod ug+x .husky/*",
+    "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "format": "npx pretty-quick --staged && npx lint-staged",

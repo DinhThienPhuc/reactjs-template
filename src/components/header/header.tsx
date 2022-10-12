@@ -1,13 +1,12 @@
 /* HEADER COMPONENT
    ========================================================================== */
 
+import { Icons, Input } from "components";
 import { ReactNode, useMemo, useState } from "react";
 
-import Icons from "assets/icons";
-import Input from "components/input/input";
 import Styled from "./header.style";
 import cx from "classnames";
-import { getPartOfTheDay } from "utils/functions";
+import { getPartOfTheDay } from "utils/helpers";
 import { useTranslation } from "services/i18n";
 
 interface IProps {

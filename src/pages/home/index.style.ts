@@ -1,7 +1,7 @@
 /* PAGE STYLE: HOME
    ========================================================================== */
 
-import Icons from "assets/icons";
+import { Icons } from "components";
 import styled from "styled-components";
 
 const Styled = {

@@ -1,3 +1,6 @@
+/* IMAGES ENTRY
+   ========================================================================== */
+
 import Avatar from "./avatar.jpg";
 import { ReactComponent as Logo } from "./logo.svg";
 import { ReactComponent as NavigatorBackground } from "./navigator-background.svg";

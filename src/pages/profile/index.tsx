@@ -3,19 +3,19 @@
 
 import { useCallback, useMemo } from "react";
 
-import Icons from "assets/icons";
+import { Icons } from "components";
 import Images from "assets/images";
 import { ROUTES } from "routes";
 import Styled from "./index.style";
+import { useLocalStorage } from "hooks";
 import { useNavigate } from "react-router-dom";
-import { useSessionStorage } from "hooks";
 import { useTranslation } from "services/i18n";
 
 const Profile = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const [, setRefreshToken] = useSessionStorage<string | null>(
+  const [, setRefreshToken] = useLocalStorage<string | null>(
     "refresh-token",
     null,
   );

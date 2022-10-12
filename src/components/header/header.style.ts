@@ -1,7 +1,7 @@
 /* COMPONENT STYLES: HEADER
    ========================================================================== */
 
-import { DEFAULT_LAYOUT_SIZE } from "containers/layouts/default.utils";
+import { DEFAULT_LAYOUT_SIZE } from "containers";
 import { Icons } from "components";
 import styled from "styled-components";
 

@@ -1,3 +1,6 @@
+/* PAGE STYLE: LOGIN
+   ========================================================================== */
+
 import { Button, Input } from "components";
 
 import styled from "styled-components";
