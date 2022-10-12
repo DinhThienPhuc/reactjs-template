@@ -9,10 +9,10 @@ export interface IPostData {
   id: string;
 }
 
-export interface IPostResponse extends IBaseResponse {
+export interface IPostResponse extends IBaseResponse<IPostData> {
   data: IPostData;
 }
 
-export interface IPostListResponse extends IBaseResponse {
+export interface IPostListResponse extends IBaseResponse<IPostData[]> {
   data: IPostData[];
 }
