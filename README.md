@@ -72,18 +72,17 @@ src
 │   ├── auth
 │   │   └── auth-route.tsx
 │   │
-│   ├── error-boundary
-│   │   ├── error-boundary.style.tsx
-│   │   └── error-boundary.tsx
-│   │
 │   ├── layouts
 │   │   ├──<component>
 │   ├── ├── ...
 │   │   ├── default.style.tsx
 │   │   └── default.tsx
 │   ├── ...
-│   └── loadable-fallback
-│       └── loading.tsx
+│   ├── loadable-fallback
+│   │   └── loading.tsx
+│   │
+│   ├── ...
+│   └── index.ts
 │
 ├── hooks
 │   ├── <hook>.ts
@@ -97,26 +96,18 @@ src
 │       └── <page>.tsx
 |
 ├── routes
-│   ├── constant.ts
 │   └── index.ts
 │
 ├── services
-│   ├── i18n
-│   │   ├── locales
-│   │   └── index.ts
-│   ├── ...
+│   ├── <service>
 │   │
-│   └── styled-themes
-│       ├── index.tsx
-│       └── schema.json
-│
-├── types
-│   └── ...
+│   ├── ...
+│   └── index.ts
 │
 └── utils
     ├── constants.ts
-    ├── functions.ts
-    ├── interfaces.ts
+    ├── definations.ts
+    ├── helpers.ts
     └── ...
 ```
 
@@ -127,7 +118,7 @@ src
 - _**Always use relative path for files inside module**_.
 - _**Always use absolute path for connecting file between modules**_.
 
-🔴 **Entry point**: _**the file contains all relative files. It is somehow a gate, an entrance for the whole folder. So that, when importing the element insided folder, we only need to import them all from one**_.
+🔴 **Entry point**: _**the file contains all relative files. It is somehow a gate, an entrance for the whole folder. So that, when importing the element insided folder, we only need to import them all from one. It's also used to import elements from @dinhthienphuc/artemis package**_.
 
 For example, with [`components`](src/components) folder:
 
@@ -189,6 +180,11 @@ import { A, B, C } from 'components'
   - `<component>.style.tsx`: component styles
   - `<component>.utils.tsx`: component utils such as interfaces, constants, functions used for component only
 
+#### [`containers`](src/containers) - internal module of the project, wrapped by functionality
+
+- `<container>` - Contains all elements of a container. It is isolated and independent from the project
+- [`index.ts`](src/containers/index.ts): the entry point for all containers
+
 #### [`hooks`](src/hooks) - useful hooks
 
 - `<useHook>` - A custom hook for specific usage, included with example.
@@ -196,10 +192,8 @@ import { A, B, C } from 'components'
 
 #### [`pages`](src/pages) - define page layout, head, which view it will render, ...
 
-- [`_app.tsx`](src/pages/_app.tsx): root component.
-- [`_document.tsx`](src/pages/_document.tsx): document component.
-- [`404.tsx`](src/pages/404.tsx): not-found component.
-- [`index.tsx`](src/pages/index.tsx): homepage
+- `<page>.style.tsx`: page styles.
+- `<page>.tsx`: page component.
 
 #### [`services`](src/services) - external services of the project, could be easily used by modifying some line of codes
 
@@ -208,8 +202,8 @@ import { A, B, C } from 'components'
 #### [`utils`](src/utils) - can contains anythings with global scope
 
 - [`constants.ts`](src/utils/constants.ts): global constants.
-- [`functions.ts`](src/utils/functions.ts): global functions.
-- [`interfaces.ts`](src/utils/interfaces.ts): global interfaces.
+- [`definations.ts`](src/utils/definations.ts): global definations - types, interfaces, enums.
+- [`helpers.ts`](src/utils/helpers.ts): global helpers.
 
 ## Commit process
 
@@ -218,12 +212,3 @@ In case Husky doesn't run on each commit, run this command manually:
 ```
 chmod ug+x .husky/*
 ```
-
-## API
-
-Feel free to pick up the best fetching stradegy for you project! ✨✨✨
-
-## Other rules
-
-- For components: use almost styled-css for styling
-- For pages: reduce the use of styled-css
