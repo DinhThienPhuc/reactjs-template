@@ -1,8 +1,6 @@
 /* API BASE INTERFACES
    ========================================================================== */
 
-import { IObject } from "utils/definations";
-
 /**
  * Base request queries
  */
@@ -15,7 +13,9 @@ export interface IBaseRequestQueries {
 /**
  * Base request body
  */
-export type IBaseRequestBody = IObject<any>
+export interface IBaseRequestBody {
+  [key: string]: any;
+}
 
 /**
  * Base response
